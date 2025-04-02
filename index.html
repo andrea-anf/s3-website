@@ -29,18 +29,23 @@
 
     <script>
         async function updateCounter() {
-          try {
-            let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/visits");
+            try {
+            let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/visits", {
+                method: "GET",
+                headers: {
+                "Cache-Control": "no-cache"
+                }
+            });
             let data = await response.json();
             document.getElementById("visits").innerText = data.value;
-          } catch (error) {
+            } catch (error) {
             console.error("Errore nel recupero del contatore:", error);
-          }
-        }
+            }
+    }
       
         updateCounter();
     </script>
-    
+
       <h3 id="visits">Loading...</h3>
 
 </body></html>
