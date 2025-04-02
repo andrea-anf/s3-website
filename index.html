@@ -16,7 +16,7 @@
     <aside>Maybe you don't care about my thoughts and that is okay, my viewer counter already added you, so you can leave.</aside>
 
     <h2> Here there will be al my thought:</h2>
------
+
 <ul>
     <li>
         Do something, anything, or the couch will absorb you.
@@ -27,4 +27,16 @@
         
     <p>Did you like it? I don't care, these are my thought, not yours</p> 
 
+    <script>
+        async function updateCounter() {
+          let response = await fetch("https://api.countapi.xyz/hit/your-namespace/your-key");
+          let data = await response.json();
+          document.getElementById("counter").innerText = "Visite: " + data.value;
+        }
+      
+        updateCounter();
+      </script>
+      
+      <h3 id="counter">Caricamento...</h3>
+      
 </body></html>
