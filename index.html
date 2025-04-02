@@ -29,7 +29,7 @@
 
     <script>
         async function updateCounter() {
-          let response = await fetch("https://api.countapi.xyz/hit/your-namespace/your-key");
+          let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net");
           let data = await response.json();
           document.getElementById("counter").innerText = "Visite: " + data.value;
         }
@@ -38,5 +38,5 @@
       </script>
       
       <h3 id="counter">Caricamento...</h3>
-      
+
 </body></html>
