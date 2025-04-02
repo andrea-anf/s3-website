@@ -29,14 +29,14 @@
 
     <script>
         async function updateCounter() {
-          let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net");
+          let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/viewers");
           let data = await response.json();
-          document.getElementById("counter").innerText = "Visite: " + data.value;
+          document.getElementById("counter").innerText = "Viewers: " + data.value;
         }
       
         updateCounter();
       </script>
       
-      <h3 id="counter">Caricamento...</h3>
+      <h3 id="counter">Loading...</h3>
 
 </body></html>
