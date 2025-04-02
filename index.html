@@ -28,15 +28,12 @@
     <p>Did you like it? I don't care, these are my thought, not yours</p> 
 
     <script>
-        async function updateCounter() {
-          let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/viewers");
-          let data = await response.json();
-          document.getElementById("counter").innerText = "Viewers: " + data.value;
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
         }
+        </script>
+        <script async src="https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/visits?callback=cb"></script>
       
-        updateCounter();
-      </script>
-      
-      <h3 id="counter">Loading...</h3>
+      <h3 id="visits">Loading...</h3>
 
 </body></html>
