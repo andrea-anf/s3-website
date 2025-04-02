@@ -27,25 +27,9 @@
         
     <p>Did you like it? I don't care, these are my thought, not yours</p> 
 
-    <script>
-        async function updateCounter() {
-            try {
-            let response = await fetch("https://api.countapi.xyz/hit/dfontv3us4zek.cloudfront.net/visits", {
-                method: "GET",
-                headers: {
-                "Cache-Control": "no-cache"
-                }
-            });
-            let data = await response.json();
-            document.getElementById("visits").innerText = data.value;
-            } catch (error) {
-            console.error("Errore nel recupero del contatore:", error);
-            }
-    }
-      
-        updateCounter();
-    </script>
+    <div id="sfcls6p9fwsk6q8stbh66yuhftekbfxlujq"></div>
+<script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=ls6p9fwsk6q8stbh66yuhftekbfxlujq&down=async" async></script>
+<noscript><a href="https://www.freecounterstat.com" title="website hit counter"><img src="https://counter4.optistats.ovh/private/freecounterstat.php?c=ls6p9fwsk6q8stbh66yuhftekbfxlujq" border="0" title="website hit counter" alt="website hit counter"></a></noscript>
 
-      <h3 id="visits">Loading...</h3>
 
 </body></html>
